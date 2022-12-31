@@ -1,0 +1,11 @@
+.logo {
+    top: 10px;
+    left: 20px;
+    position: absolute;
+}
+
+.owner {
+    bottom: 10px;
+    left: 20px;
+    position: absolute;
+}

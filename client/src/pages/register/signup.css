@@ -1,0 +1,94 @@
+.signup {
+    display: flex;
+}
+
+.signup-page {
+    padding: 40px;
+    padding-top: 100px;
+}
+
+.signup-page h1,
+p {
+    display: flex;
+    padding-left: 40px;
+}
+
+.signup-page p {
+    margin-top: -15px;
+}
+
+
+.signup-field-email {
+    padding: 20px 0px;
+    position: relative;
+}
+
+.signup-field-password {
+    padding: 20px 0px;
+    padding-left: 0px;
+    position: relative;
+}
+
+.signup-field-confirm-password  {
+    padding: 20px 0px;
+}
+
+.signup-field-confirm-password img {
+    position: absolute;
+    padding-top: 6px;
+    padding-left: 38px;
+}
+
+
+.signup-field-confirm-password input {
+    margin-left: 15px;
+}
+
+.signup-field-email img {
+    position: absolute;
+    padding-top: 6px;
+    padding-left: 20px;
+}
+
+.signup-field-password img {
+    position: absolute;
+    padding-top: 6px;
+    padding-left: 20px;
+}
+
+.signup-input {
+    border: none;
+    border-bottom: 2px solid #b7b7c138;
+    padding: 10px;
+    padding-left: 74px;
+    font-weight: 700;
+    width: 75%;
+}
+
+.signup-button {
+    margin-top: 50px;
+    background-color: rgb(255, 133, 58);
+    border-radius: 5px;
+    padding: 12px 50px;
+    border: none;
+    color: aliceblue;
+    font-size: 15px;
+}
+
+.newuser {
+    margin-top: 40px;
+    font-weight: 500;
+}
+
+.login-link {
+    color: rgb(255, 133, 58);
+    text-decoration: none;
+}
+
+.heading {
+    margin-right: 300px;
+}
+
+.login-link-btn {
+    padding-top: 20px;
+}

@@ -1,0 +1,84 @@
+.signin {
+    display: flex;
+}
+
+.signin-page {
+    padding: 40px;
+    padding-top: 100px;
+}
+
+.signin-page h1,
+p {
+    display: flex;
+    padding-left: 40px;
+}
+
+.signin-page p {
+    margin-top: -15px;
+}
+
+
+.signin-field-email {
+    padding: 20px 0px;
+    position: relative;
+}
+
+.signin-field-password {
+    padding: 20px 0px;
+    padding-left: 12px;
+    position: relative;
+}
+
+.signin-field-email img {
+    position: absolute;
+    padding-top: 6px;
+    padding-left: 20px;
+}
+
+.signin-field-password img {
+    position: absolute;
+    padding-top: 6px;
+    padding-left: 20px;
+}
+
+.signin-input {
+    border: none;
+    border-bottom: 2px solid #b7b7c138;
+    padding: 10px;
+    padding-left: 74px;
+    font-weight: 700;
+    width: 75%;
+}
+
+.forgot-password {
+    font-weight: 600;
+    position: absolute;
+    /* right: 90px; */
+    width: 230px;
+    text-align: right;
+}
+
+.signin-button {
+    margin-top: 100px;
+    background-color: rgb(255, 133, 58);
+    border-radius: 5px;
+    padding: 12px 50px;
+    border: none;
+    color: aliceblue;
+    font-size: 15px;
+}
+
+.newuser {
+    margin-top: 140px;
+    font-weight: 500;
+}
+
+.signup-link {
+    color: rgb(255, 133, 58);
+    text-decoration: none;
+}
+
+.signup-link-btn {
+    padding-top: 125px;
+}
+
