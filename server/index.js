@@ -8,54 +8,45 @@ const { getJWTtoken } = require('./servives/jwt');
 
 
 db();
-app.use(express.json()); 
+app.use(express.json());
 app.use(cors());
 
 app.post('/login', async (req, res) => {
-    const  { email, password } = req.body;
-    const user = await userModel.findOne({email : email})
+    const { email, password } = req.body;
+    const user = await userModel.findOne({ email: email })
     console.log(user);
-    
-    if(!user){
-        return res.send({message:"user does not exits"})
+
+    if (!user) {
+        return res.send({ message: "user does not exits" })
     }
 
-    if(password !== user.password){
-       return res.send({message:"password does not match"})
+    if (password !== user.password) {
+        return res.send({ message: "password does not match" })
     }
 
     const Token = getJWTtoken(user)
-    console.log("Token=",Token);
-    res.send({message:"login succussesfully",user,Token})
+    // console.log("Token=", Token);
+    res.send({ message: "login succussesfully", user, Token })
 })
 
-// app.post('/register', (req, res) => {
-//     console.log(req.body)  
-// })
+app.post('/register', async (req, res) => {
 
-app.post('/register', (req, res) => {
-    const { name, email, password } = req.body;
-    userModel.findOne({ email: email }, (err, user) => {
-        if (user) {
-            res.send({ message: "User already registered" })
+    const existUser = await userModel.findOne({ email: req.body.email })
+    if (existUser) {
+        res.send({
+            message: "user already exist"
+        })
+    }
+    else {
+        try {
+            const newUser = userModel( req.body )
+            await newUser.save()
+            res.send({ message: "Account created successfully", registered: true })
+        } catch (error) {
+            res.send({ Error: error.message })
         }
+    }
 
-        else {
-            const user = new userModel({
-                name,
-                email,
-                password
-            })
-            user.save(err => {
-                if (err) {
-                    res.send(err)
-                }
-                else {
-                    res.send({ message: "Successfully Registered" })
-                }
-            })
-        }
-    })
 
     // console.log(user);
 })
