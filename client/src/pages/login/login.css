@@ -82,3 +82,17 @@ p {
     padding-top: 125px;
 }
 
+/* login2-css */
+
+.form-error {
+    position: absolute;
+    font-size: 15px;
+    padding-top: 15px;
+    margin-left: 54px;
+    /* display: contents; */
+    color: #ff0a01;
+  }
+
+.password {
+    margin-left: 45px;
+}

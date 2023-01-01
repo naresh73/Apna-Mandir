@@ -1,13 +1,13 @@
 import './App.css';
-import SignUp from './pages/register';
 import {
   BrowserRouter, Route, Routes, useNavigate
 } from 'react-router-dom';
 import HomePage from './Componennts/Home';
-import SignInUser from './pages/login';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
+import Login from './pages/login';
+import Signup from './pages/signup';
 
 function App() {
 
@@ -16,27 +16,24 @@ function App() {
 
   useEffect(() => {
     isloggedIn ? navigate("/") : navigate("/login")
-    console.log("Hello");
   }, [isloggedIn])
 
   const [user, setLoginUser] = useState({})
 
   return (
     <div className="App">
-
       <Routes>
         <Route exact path='/' element=
           {
             // user && user._id ? 
             <HomePage />
-            // : <SignInUser setLoginUser={setLoginUser} />
+            // : <Login setLoginUser={setLoginUser} />
           }
         />
-        <Route path='/login' element={<SignInUser setLoginUser={setLoginUser} />} />
-        <Route path='/register' element={<SignUp />} />
+        {/* <Route path='/login' element={<SignInUser setLoginUser={setLoginUser} />} /> */}
+        <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Signup />} />
       </Routes>
-
-
     </div>
   );
 }

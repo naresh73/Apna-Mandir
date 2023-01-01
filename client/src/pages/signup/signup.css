@@ -92,3 +92,18 @@ p {
 .login-link-btn {
     padding-top: 20px;
 }
+
+/* // */
+
+.form-error {
+    position: absolute;
+    font-size: 15px;
+    /* padding-top: 15px; 
+    margin-left: 30px; */
+    /* display: contents; */
+    color: #ff0a01;
+  }
+
+.password {
+    padding-left: 48px;
+}
