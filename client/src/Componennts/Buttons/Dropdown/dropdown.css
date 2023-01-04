@@ -1,0 +1,32 @@
+.dropdown-button {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 50px;
+}
+
+.dropdown-button img {
+    width: 30px;
+    position: fixed;
+}
+
+.dropdown-button option {
+    color: #FF8744;
+    font-weight: bold;
+}
+
+.dropdown-button select {
+    width: 180px;
+    height: 40px;
+    border: 2px solid var(--unnamed-color-ff8744);
+    border: 2px solid #FF8744;
+    border-radius: 10px;
+    color: #FF8744;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 10%;
+    font-weight: bold;
+    text-overflow: '';
+
+}

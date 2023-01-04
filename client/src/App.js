@@ -14,9 +14,9 @@ function App() {
   const isloggedIn = useSelector(state => state.isloggedIn)
   const navigate = useNavigate()
 
-  useEffect(() => {
-    isloggedIn ? navigate("/") : navigate("/login")
-  }, [isloggedIn])
+  // useEffect(() => {
+  //   isloggedIn ? navigate("/") : navigate("/login")
+  // }, [isloggedIn])
 
   const [user, setLoginUser] = useState({})
 
